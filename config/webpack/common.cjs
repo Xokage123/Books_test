@@ -76,7 +76,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [babelLoader, 'ts-loader']
             },
-            // CSS, SASS
+            // CSS
             {
                 test: /\.(c|sa|sc)ss$/i,
                 use: [
@@ -85,7 +85,7 @@ module.exports = {
                         loader: 'css-loader',
                         options: { importLoaders: 1, sourceMap: true }
                     },
-                    'sass-loader'
+                    "sass-loader"
                 ]
             },
             // Pug
