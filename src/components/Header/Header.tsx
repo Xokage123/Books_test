@@ -7,7 +7,7 @@ import { categoriesOptions, sortingOption, dataFetch } from '../../data/index'
 // Экшены
 import { addValueFromList } from '../../actions/books'
 // Стили
-import H1 from "@material-tailwind/react/Heading1";
+import H2 from "@material-tailwind/react/Heading2";
 import H6 from "@material-tailwind/react/Heading6";
 import Input from "@material-tailwind/react/Input";
 import Select from 'react-select'
@@ -40,7 +40,7 @@ export function Header(props: any) {
   return (
     <header className="header">
       <div className="content-container">
-        <H1 className="header__title">Search for the newest and most interesting books</H1>
+        <H2 className="header__title">Search for the newest and most interesting books</H2>
         <Input
           onKeyDown={(ev: any) => searchUser(ev)}
           className="header__input"

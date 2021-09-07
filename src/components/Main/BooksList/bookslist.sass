@@ -3,9 +3,29 @@
     display: grid
     padding: 20px 0
     width: 100%
-    grid-template-columns:  repeat(4, 1fr)
-    grid-template-rows: repeat(5, minmax(800, 1000))
+    grid-template-columns: repeat(5, 1fr)
+    grid-template-rows: repeat(5, 1fr)
     grid-auto-flow: dense
     gap: 30px
     margin-bottom: 20px
     background-color: #d4d4d4
+
+@media all and (max-width: 1440px)
+  .books
+    &__list
+      grid-template-columns: repeat(4, 1fr)
+
+@media all and (max-width: 1024px)
+  .books
+    &__list
+      grid-template-columns: repeat(3, 1fr)
+
+@media all and (max-width: 768px)
+  .books
+    &__list
+      grid-template-columns: repeat(2, 1fr)
+
+@media all and (max-width: 768px)
+  .books
+    &__list
+      grid-template-columns: repeat(1, 1fr)

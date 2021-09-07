@@ -33,7 +33,11 @@ const BooksList = (props: any) => {
         })
     }
   }, []);
-  const Content = load || (listBooks.length > 0) && !!listBooks[0] ? <>
+  const testValue = useMemo(() => {
+    return (load && !!listBooks[0]) || ((listBooks.length > 0) && !!listBooks[0])
+  }, [listBooks]);
+
+  const Content = testValue ? <>
     <H6>Found {listBooks.length} results</H6>
     <ul className="books__list">
       {
@@ -83,7 +87,7 @@ const BooksList = (props: any) => {
   return (
     <>
       {
-        load || (listBooks.length > 0) && !!listBooks[0] ? Content : SpinerLoading
+        testValue ? Content : SpinerLoading
       }
     </>
   );

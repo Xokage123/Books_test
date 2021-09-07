@@ -1,4 +1,5 @@
 .header
+  &__title
   .content-container
     display: flex
     flex-wrap: wrap
@@ -27,6 +28,12 @@
 
 @media all and (max-width: 1024px)
   .header
+    &__select
+      &-container
+        width: 100%
+
+@media all and (max-width: 560px)
+  .header
     &__categories
       &-container
-        margin-bottom: 20px
+        margin-bottom: 10px
