@@ -14,7 +14,9 @@ import { addBook } from '../../../actions/books'
 
 // Интерфейсы
 import {
-  IBookProps
+  IBookProps,
+  FunctionComponent,
+  IFullBook,
 } from '../../../interface/index'
 
 // Стили
@@ -26,7 +28,7 @@ import { SpinerLoading } from '../../Styles'
 import './book.sass';
 
 
-export const BookMini = (props: IBookProps) => {
+export const BookMini: FunctionComponent<IBookProps> = (props: IBookProps) => {
   const { id, title, image, categories, author } = props;
   return (
     <Link to={`/book/${id}`}>
@@ -48,7 +50,7 @@ export const BookMini = (props: IBookProps) => {
   );
 }
 
-export function BookFull(props: any) {
+export const BookFull: FunctionComponent<IFullBook> = (props) => {
   const { id }: any = useParams();
   const {
     book,

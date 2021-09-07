@@ -1,11 +1,11 @@
 //React+Redux
-import React from 'react';
+import React, { FC } from 'react';
 //Router
 import { Routes } from '../Router'
 // Стили
 import './main.sass';
 
-export function Main() {
+export const Main: FC = () => {
   return (
     <main className="main">
       <div className="content-container">

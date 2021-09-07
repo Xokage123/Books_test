@@ -5,6 +5,29 @@ export interface IBooksListProps {
   addValueFromList: any;
 }
 
+export interface IFullBook {
+  book: {
+    volumeInfo: {
+      imageLinks: {
+        medium?: string;
+      },
+      categories: Array<string>;
+      title: string;
+      authors: Array<string>;
+      description: string
+    }
+  };
+  addBook: Function
+}
+
+export interface IBookProps {
+  id: string;
+  title: string;
+  image: string;
+  categories: Array<string> | string;
+  author: Array<string>;
+}
+
 type PropsWithChildren<P> = P & { children?: ReactNode };
 export interface FunctionComponent<P = {}> {
   (props: PropsWithChildren<P>, context?: any): ReactElement | null;
