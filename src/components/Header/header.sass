@@ -1,2 +1,32 @@
 .header
-  color: red
+  .content-container
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    text-align: center
+  &__select
+    &-container
+      width: 50%
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-between
+      margin-top: 20px
+  &__categories
+    &-container
+      display: flex
+      align-items: center
+  &__sorting
+    &-container
+      display: flex
+      align-items: center
+  &__select
+    &-category
+      margin-left: 10px
+      width: 150px
+
+@media all and (max-width: 1024px)
+  .header
+    &__categories
+      &-container
+        margin-bottom: 20px
