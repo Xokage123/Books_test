@@ -7,11 +7,11 @@ import { App } from './App'
 import './styles/css/normalize.css'
 import './styles/scss/index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import "@material-tailwind/react/tailwind.css";
 
 const rootEl = document.getElementById('root')
-render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  rootEl
+render( <StrictMode >
+    <App / >
+    </StrictMode>,
+    rootEl
 )

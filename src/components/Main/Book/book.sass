@@ -1,0 +1,39 @@
+.book
+  &__container  
+    height: 100% 
+    padding: 10px
+    border-radius: 10px
+    background-color: white
+    overflow: hidden
+    transition: transform .5s ease-in-out
+    &:hover
+      color: black
+      box-shadow: 0 0 10px black
+      transform: scale(1.06)
+  &__image
+    margin: 0 auto
+    border-bottom: 2px solid black
+  &__categories
+    display: block
+    width: 100%
+    margin-bottom: 10px
+    color: #999393
+    text-decoration: underline
+    &-list
+      color: #999393
+  &__title
+    font-size: 20px
+    font-weight: 700
+  &__author
+    &-list
+      display: flex
+      flex-wrap: wrap
+    &-item
+      margin-right: 5px
+      color: #999393
+  &__full-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    flex-wrap: wrap
+    padding: 20px 0
